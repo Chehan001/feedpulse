@@ -4,9 +4,9 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import feedbackRouter from './routes/feedback.routes';
-import authRouter from './routes/auth.routes';
-import { seedAdmin } from './controllers/auth.controller';
+import feedbackRouter from './routes/feedback.routes.js';
+import authRouter from './routes/auth.routes.js';
+import { seedAdmin } from './controllers/auth.controller.js';
 
 dotenv.config();
 

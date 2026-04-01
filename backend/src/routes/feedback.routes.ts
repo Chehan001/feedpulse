@@ -6,8 +6,8 @@ import {
   updateFeedback, 
   deleteFeedback, 
   getTrendsSummary 
-} from '../controllers/feedback.controller';
-import { protect } from '../middleware/auth.middleware';
+} from '../controllers/feedback.controller.js';
+import { protect } from '../middleware/auth.middleware.js';
 import rateLimit from 'express-rate-limit';
 
 const feedbackRouter = Router();

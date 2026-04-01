@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import Feedback, { IFeedback } from '../models/Feedback';
-import { analyzeFeedback } from '../services/gemini.service';
+import Feedback, { IFeedback } from '../models/Feedback.js';
+import { analyzeFeedback } from '../services/gemini.service.js';
 
 export const createFeedback = async (req: Request, res: Response) => {
   try {
