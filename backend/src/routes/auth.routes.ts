@@ -3,7 +3,7 @@ import { login } from '../controllers/auth.controller.js';
 
 const authRouter = Router();
 
-// POST /api/auth/login
+// auth login
 authRouter.post('/login', login);
 
 export default authRouter;

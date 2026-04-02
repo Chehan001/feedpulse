@@ -20,15 +20,15 @@ const feedbackLimiter = rateLimit({
   legacyHeaders: false,
 });
 
-// GET endpoints (Requirement 4)
+// Admin routes (Protected) 
 feedbackRouter.get('/summary', protect, getTrendsSummary); // Admin trends summary
-feedbackRouter.get('/', protect, getAllFeedback); // Admin view (supports filters + pagination)
+feedbackRouter.get('/', protect, getAllFeedback); // Admin view 
 feedbackRouter.get('/:id', protect, getFeedbackById); // Get detailed view
 
-// POST feedback (Public)
+//public route for feedback submission 
 feedbackRouter.post('/', feedbackLimiter, createFeedback);
 
-// PATCH/DELETE (Admin Only)
+// Admin update and delete routes   
 feedbackRouter.patch('/:id', protect, updateFeedback);
 feedbackRouter.delete('/:id', protect, deleteFeedback);
 

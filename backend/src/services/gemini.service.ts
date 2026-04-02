@@ -8,7 +8,7 @@ const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 export interface IFeedbackAnalysis {
   category: string;
   sentiment: 'Positive' | 'Neutral' | 'Negative';
-  priority_score: number; // 1-10
+  priority_score: number; 
   summary: string;
   tags: string[];
 }
@@ -40,7 +40,7 @@ export const analyzeFeedback = async (
     const jsonMatch = text.match(/\{[\s\S]*\}/);
     if (jsonMatch) {
       const parsed = JSON.parse(jsonMatch[0]);
-      // Normalize values if needed
+      // Normalize values 
       return {
         category: parsed.category || category,
         sentiment: ['Positive', 'Neutral', 'Negative'].includes(parsed.sentiment) ? parsed.sentiment : 'Neutral',
@@ -52,6 +52,6 @@ export const analyzeFeedback = async (
     return null;
   } catch (error) {
     console.error('Gemini API Error:', error);
-    return null; // Requirement 2.3 - handle gracefully, feedback still saved
+    return null; 
   }
 };

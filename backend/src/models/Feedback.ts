@@ -9,7 +9,7 @@ export interface IFeedback extends Document {
   submitterEmail?: string;
   ai_category?: string;
   ai_sentiment?: 'Positive' | 'Neutral' | 'Negative';
-  ai_priority?: number; // 1-10
+  ai_priority?: number; 
   ai_summary?: string;
   ai_tags?: string[];
   ai_processed: boolean;
@@ -54,7 +54,7 @@ const FeedbackSchema: Schema = new Schema(
   { timestamps: true }
 );
 
-// Requirement 5.2 - Indexes
+// Indexes
 FeedbackSchema.index({ status: 1 });
 FeedbackSchema.index({ category: 1 });
 FeedbackSchema.index({ ai_priority: -1 });

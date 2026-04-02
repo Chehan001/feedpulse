@@ -1,5 +1,3 @@
-// No import needed for global jest in ts-jest setup
-
 describe('Feedback Processing Logic', () => {
   it('should correctly prioritize feedback scores', () => {
     const score = 9;

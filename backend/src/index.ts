@@ -18,7 +18,7 @@ const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017/AI_powered_
 mongoose.connect(mongoUrl)
   .then(() => {
     console.log('Successfully connected to MongoDB.');
-    seedAdmin(); // Seed admin user if it doesn't exist
+    seedAdmin(); 
   })
   .catch((error) => console.error('Error connecting to MongoDB:', error));
 

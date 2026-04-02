@@ -6,7 +6,7 @@ export const createFeedback = async (req: Request, res: Response) => {
   try {
     const { title, description, category, submitterName, submitterEmail } = req.body;
 
-    // Requirement 4.5 - Sanitization/Validation
+    // Validation
     if (!title || title.length > 120) {
       return res.status(400).json({ success: false, error: 'Title required and max 120 chars' });
     }
@@ -158,7 +158,7 @@ export const getTrendsSummary = async (req: Request, res: Response) => {
         totalItems: totalCount,
         openItems: totalCount - resolvedCount,
         avgPriority: avgPriority[0]?.avg || 0,
-        trendInfo: recentFeedback // Frontend can summarize further or display them
+        trendInfo: recentFeedback //  summarize display 
       },
       message: 'Dashboard statistics fetched'
     });

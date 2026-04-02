@@ -32,7 +32,7 @@ export const login = async (req: Request, res: Response) => {
   }
 };
 
-// Seeding function if no users exist
+// Seeding function (if no users exist)
 export const seedAdmin = async () => {
   try {
     const count = await User.countDocuments();
