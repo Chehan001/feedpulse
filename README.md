@@ -109,23 +109,17 @@ FeedPulse AI acts like your 24/7 virtual product manager:
 ---
 ## Environment Variables
 
-MONGODB_URI= my_mongodb_connection
-GEMINI_API_KEY= my_google_gemini_key
-ADMIN_EMAIL=adminfeedpulse01@gmail.com
-ADMIN_PASSWORD=Admin01@
+- MONGODB_URI= my_mongodb_connection 
+- GEMINI_API_KEY= my_google_gemini_key
+- ADMIN_EMAIL=adminfeedpulse01@gmail.com
+- ADMIN_PASSWORD=Admin01@
 
 ## Installation 
 
-# Clone repository
-git clone https://github.com/Chehan001/feedpulse.git
-# Navigate to project
-cd feedpulse
-
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
+- Clone repository : git clone https://github.com/Chehan001/feedpulse.git
+- Navigate to project : cd feedpulse
+- Install dependencies : npm install
+- Run development server : npm run dev
 
 <div align="center">
   <p><i>Built to make product iteration smarter and faster.</i></p>
