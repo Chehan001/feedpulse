@@ -42,20 +42,20 @@ User → Node.js API → MongoDB + Gemini AI → Enriched Data → Admin Dashboa
   <p><em>Detailed Step-by-Step AI Implementation Workflow</em></p>
 </div>
 
-### 🟢 1. User Capture (Frontend)
+###  1. User Capture (Frontend)
 Users submit feedback via a simple, intuitive form including:
 - **Title**
 - **Description**
 - **Contact Info**
 
-### ⚡ 2. Backend Processing (Node.js API)
+###  2. Backend Processing (Node.js API)
 Upon submission:
 - Data is securely sent to the backend.
 - The process splits into two parallel, highly efficient flows:
   -  **MongoDB**: Stores the raw feedback (Status: `pending_ai_processing`).
   -  **Gemini AI**: Sends an engineered prompt and requests structured analysis.
 
-### 🧠 3. AI Intelligence Layer (Google Gemini)
+###  3. AI Intelligence Layer (Google Gemini)
 Gemini processes the feedback context and returns precise data points:
 - **Sentiment** *(Positive / Neutral / Negative)*
 - **Priority Score** *(P1–P10)*
@@ -65,7 +65,7 @@ Gemini processes the feedback context and returns precise data points:
 
 📦 **Output format:** Strict JSON payload
 
-### 🔗 4. Data Enrichment (MongoDB Merge)
+###  4. Data Enrichment (MongoDB Merge)
 The backend intelligently merges the AI response with the original database record:
 
 ```json
@@ -78,7 +78,7 @@ The backend intelligently merges the AI response with the original database reco
 }
 ```
 
-### 📊 5. Admin Dashboard (Next.js)
+###  5. Admin Dashboard (Next.js)
 Empowered by AI-enriched data, Admins can:
 -  **Identify critical issues instantly** based on automated AI scoring.
 -  **Manage feedback lifecycle** seamlessly (New, In Review, Resolved).
@@ -89,10 +89,10 @@ Empowered by AI-enriched data, Admins can:
 
 ## 🧠 AI Capabilities
 FeedPulse AI acts like your 24/7 virtual product manager:
-- ✔️ **Understands user intent**
-- ✔️ **Prioritizes issues automatically**
-- ✔️ **Highlights recurring problems**
-- ✔️ **Reduces analysis time from hours → seconds**
+-  **Understands user intent**
+-  **Prioritizes issues automatically**
+-  **Highlights recurring problems**
+-  **Reduces analysis time from hours → seconds**
 
 ---
 
@@ -107,6 +107,25 @@ FeedPulse AI acts like your 24/7 virtual product manager:
 | **Styling** |  Tailwind CSS |
 
 ---
+## Environment Variables
+
+MONGODB_URI= my_mongodb_connection
+GEMINI_API_KEY= my_google_gemini_key
+ADMIN_EMAIL=adminfeedpulse01@gmail.com
+ADMIN_PASSWORD=Admin01@
+
+## Installation 
+
+# Clone repository
+git clone https://github.com/Chehan001/feedpulse.git
+# Navigate to project
+cd feedpulse
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
 
 <div align="center">
   <p><i>Built to make product iteration smarter and faster.</i></p>
