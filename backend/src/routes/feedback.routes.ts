@@ -5,7 +5,8 @@ import {
   getFeedbackById, 
   updateFeedback, 
   deleteFeedback, 
-  getTrendsSummary 
+  getTrendsSummary,
+  reanalyzeFeedback
 } from '../controllers/feedback.controller.js';
 import { protect } from '../middleware/auth.middleware.js';
 import rateLimit from 'express-rate-limit';
@@ -31,5 +32,6 @@ feedbackRouter.post('/', feedbackLimiter, createFeedback);
 // Admin update and delete routes   
 feedbackRouter.patch('/:id', protect, updateFeedback);
 feedbackRouter.delete('/:id', protect, deleteFeedback);
+feedbackRouter.post('/:id/reanalyze', protect, reanalyzeFeedback);
 
 export default feedbackRouter;

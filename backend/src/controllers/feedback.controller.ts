@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import Feedback, { IFeedback } from '../models/Feedback.js';
-import { analyzeFeedback } from '../services/gemini.service.js';
+import { analyzeFeedback, summarizeThemes } from '../services/gemini.service.js';
 
 export const createFeedback = async (req: Request, res: Response) => {
   try {
@@ -140,9 +140,23 @@ export const deleteFeedback = async (req: Request, res: Response) => {
 // Requirement 4: Trend summary
 export const getTrendsSummary = async (req: Request, res: Response) => {
   try {
+    const { generateTheme } = req.query;
+
     const recentFeedback = await Feedback.find({
       createdAt: { $gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) }
-    }).select('title description ai_summary ai_category');
+    }).select('title description ai_summary ai_category ai_sentiment');
+
+    let aiThemes = null;
+    if (generateTheme === 'true' && recentFeedback.length > 0) {
+      const formattedForPrompt = recentFeedback.map(f => ({
+        title: f.title,
+        description: f.description,
+        category: f.ai_category || f.category,
+        ai_sentiment: f.ai_sentiment
+      }));
+      const themesResult = await summarizeThemes(formattedForPrompt);
+      if (themesResult) aiThemes = themesResult.themes;
+    }
 
     // Stats
     const totalCount = await Feedback.countDocuments();
@@ -158,10 +172,38 @@ export const getTrendsSummary = async (req: Request, res: Response) => {
         totalItems: totalCount,
         openItems: totalCount - resolvedCount,
         avgPriority: avgPriority[0]?.avg || 0,
-        trendInfo: recentFeedback //  summarize display 
+        trendInfo: recentFeedback, // summarize display 
+        aiThemes
       },
       message: 'Dashboard statistics fetched'
     });
+  } catch (error) {
+    res.status(500).json({ success: false, error: 'Internal server error' });
+  }
+};
+
+export const reanalyzeFeedback = async (req: Request, res: Response) => {
+  try {
+    const feedback = await Feedback.findById(req.params.id);
+    if (!feedback) {
+      return res.status(404).json({ success: false, error: 'Feedback not found' });
+    }
+
+    const aiAnalysis = await analyzeFeedback(feedback.title, feedback.description, feedback.category);
+
+    if (aiAnalysis) {
+      feedback.ai_category = aiAnalysis.category;
+      feedback.ai_sentiment = aiAnalysis.sentiment;
+      feedback.ai_priority = aiAnalysis.priority_score;
+      feedback.ai_summary = aiAnalysis.summary;
+      feedback.ai_tags = aiAnalysis.tags;
+      feedback.ai_processed = true;
+      
+      await feedback.save();
+      return res.status(200).json({ success: true, data: feedback, message: 'AI Analysis Complete' });
+    } else {
+      return res.status(500).json({ success: false, error: 'AI Analysis failed. Try again later.' });
+    }
   } catch (error) {
     res.status(500).json({ success: false, error: 'Internal server error' });
   }

@@ -55,3 +55,39 @@ export const analyzeFeedback = async (
     return null; 
   }
 };
+
+export const summarizeThemes = async (
+  feedbackList: { title: string; description: string; category: string; ai_sentiment?: string }[]
+): Promise<{ themes: { theme: string; description: string; sentiment: string; occurrence: number }[] } | null> => {
+  const prompt = `
+    Analyze the following list of recent product feedback items.
+    Identify the top 3-5 emerging themes or most requested features.
+    Return ONLY valid JSON in the exact structure below:
+    {
+      "themes": [
+        {
+          "theme": "Very short name of the theme",
+          "description": "One sentence describing the pattern",
+          "sentiment": "Positive|Neutral|Negative (overall sentiment for this theme)",
+          "occurrence": Number of times this theme appeared
+        }
+      ]
+    }
+
+    Feedback Items:
+    ${JSON.stringify(feedbackList)}
+  `;
+
+  try {
+    const result = await model.generateContent(prompt);
+    const text = result.response.text();
+    const jsonMatch = text.match(/\{[\s\S]*\}/);
+    if (jsonMatch) {
+      return JSON.parse(jsonMatch[0]);
+    }
+    return null;
+  } catch (error) {
+    console.error('Gemini API Error (Themes):', error);
+    return null;
+  }
+};
