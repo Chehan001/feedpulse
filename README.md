@@ -12,13 +12,13 @@ It eliminates manual effort by converting raw user input into structured enginee
 ---
 
 ## ✨ Key Features
-- 🧠 **AI-powered sentiment analysis**
-- 🔥 **Automatic priority scoring (P1–P10)**
-- 🏷️ **Smart tagging (#Bug, #UX, #Feature)**
-- 📊 **Theme extraction & trend detection**
-- ⚡ **Real-time processing pipeline**
-- 🧩 **Seamless MongoDB integration**
-- 📈 **Admin dashboard with actionable insights**
+-  **AI-powered sentiment analysis**
+-  **Automatic priority scoring (P1–P10)**
+-  **Smart tagging (#Bug, #UX, #Feature)**
+-  **Theme extraction & trend detection**
+-  **Real-time processing pipeline**
+-  **Seamless MongoDB integration**
+-  **Admin dashboard with actionable insights**
 
 ---
 
@@ -52,16 +52,16 @@ Users submit feedback via a simple, intuitive form including:
 Upon submission:
 - Data is securely sent to the backend.
 - The process splits into two parallel, highly efficient flows:
-  - 🗄️ **MongoDB**: Stores the raw feedback (Status: `pending_ai_processing`).
-  - 🧠 **Gemini AI**: Sends an engineered prompt and requests structured analysis.
+  -  **MongoDB**: Stores the raw feedback (Status: `pending_ai_processing`).
+  -  **Gemini AI**: Sends an engineered prompt and requests structured analysis.
 
 ### 🧠 3. AI Intelligence Layer (Google Gemini)
 Gemini processes the feedback context and returns precise data points:
-- 😊 **Sentiment** *(Positive / Neutral / Negative)*
-- 🔥 **Priority Score** *(P1–P10)*
-- 🧾 **Executive Summary**
-- 🏷️ **Tags** *(e.g., #Bug, #UX, #Feature)*
-- 📊 **Theme Extraction**
+- **Sentiment** *(Positive / Neutral / Negative)*
+- **Priority Score** *(P1–P10)*
+- **Executive Summary**
+- **Tags** *(e.g., #Bug, #UX, #Feature)*
+- **Theme Extraction**
 
 📦 **Output format:** Strict JSON payload
 
@@ -80,10 +80,10 @@ The backend intelligently merges the AI response with the original database reco
 
 ### 📊 5. Admin Dashboard (Next.js)
 Empowered by AI-enriched data, Admins can:
-- 🚨 **Identify critical issues instantly** based on automated AI scoring.
-- 🔄 **Manage feedback lifecycle** seamlessly (New, In Review, Resolved).
-- 📈 **Generate insights & trends** across their product context.
-- 🔁 **Re-trigger AI processing** if needed manually.
+-  **Identify critical issues instantly** based on automated AI scoring.
+-  **Manage feedback lifecycle** seamlessly (New, In Review, Resolved).
+-  **Generate insights & trends** across their product context.
+-  **Re-trigger AI processing** if needed manually.
 
 ---
 
@@ -100,11 +100,11 @@ FeedPulse AI acts like your 24/7 virtual product manager:
 
 | Layer | Technology |
 | :--- | :--- |
-| **Frontend** | ⚛️ Next.js / React |
-| **Backend** | 🟢 Node.js / Express |
-| **Database** | 🍃 MongoDB |
-| **AI Engine** | ⚙️ Google Gemini API |
-| **Styling** | 🎨 Tailwind CSS |
+| **Frontend** |  Next.js / React |
+| **Backend** |  Node.js / Express |
+| **Database** |  MongoDB |
+| **AI Engine** |  Google Gemini API |
+| **Styling** |  Tailwind CSS |
 
 ---
 
