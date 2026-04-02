@@ -66,8 +66,8 @@ export default function FeedbackForm() {
   };
 
   return (
-    <div className="w-full mx-auto p-8 md:p-10 bg-zinc-900/50 backdrop-blur-xl rounded-[2rem] border border-zinc-800 shadow-2xl relative overflow-hidden group">
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+    <div className="w-full mx-auto p-8 md:p-10 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-xl rounded-[2rem] border border-zinc-200 dark:border-zinc-800 shadow-2xl shadow-indigo-500/5 dark:shadow-2xl relative overflow-hidden group">
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 text-zinc-900 dark:text-white"></div>
       
       <AnimatePresence mode="wait">
         {submitStatus === 'success' ? (
@@ -82,17 +82,17 @@ export default function FeedbackForm() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
-              className="h-24 w-24 text-green-400 bg-green-500/10 rounded-full flex items-center justify-center border border-green-500/20 shadow-lg shadow-green-500/20"
+              className="h-24 w-24 text-green-500 dark:text-green-400 bg-green-50 dark:bg-green-500/10 rounded-full flex items-center justify-center border border-green-200 dark:border-green-500/20 shadow-lg shadow-green-500/10 dark:shadow-green-500/20"
             >
               <CheckCircle2 className="h-12 w-12" />
             </motion.div>
             <div className="space-y-3">
-              <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">Awesome! Request Received.</h3>
-              <p className="text-zinc-400 font-medium max-w-sm">Our AI will now categorize and prioritize your feedback for the product team.</p>
+              <h3 className="text-3xl font-bold bg-gradient-to-r from-zinc-900 to-zinc-500 dark:from-white dark:to-zinc-400 bg-clip-text text-transparent">Awesome! Request Received.</h3>
+              <p className="text-zinc-600 dark:text-zinc-400 font-medium max-w-sm">Our AI will now categorize and prioritize your feedback for the product team.</p>
             </div>
             <button
               onClick={() => setSubmitStatus('idle')}
-              className="mt-6 px-8 py-3 bg-zinc-800 text-white rounded-xl hover:bg-zinc-700 transition-all font-bold border border-zinc-700 shadow-lg"
+              className="mt-6 px-8 py-3 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white rounded-xl hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all font-bold border border-zinc-200 dark:border-zinc-700 shadow-sm dark:shadow-lg"
             >
               Submit Another Idea
             </button>
@@ -106,7 +106,7 @@ export default function FeedbackForm() {
             className="space-y-8 relative z-10"
           >
             {submitStatus === 'error' && (
-              <div className="p-4 bg-red-500/10 border border-red-500/20 text-red-400 rounded-xl flex items-center gap-3">
+              <div className="p-4 bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 text-red-600 dark:text-red-400 rounded-xl flex items-center gap-3">
                 <AlertCircle className="h-5 w-5 shrink-0" />
                 <p className="text-sm font-medium">{errorMessage}</p>
               </div>
@@ -114,56 +114,56 @@ export default function FeedbackForm() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="text-xs font-bold text-zinc-400 uppercase tracking-wider">Name (Optional)</label>
+                <label className="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Name (Optional)</label>
                 <input
                   {...register('submitterName')}
                   placeholder="E.g. Jane Doe"
-                  className="w-full px-5 py-3.5 rounded-xl border border-zinc-800 bg-zinc-950/50 text-white placeholder:text-zinc-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition-all shadow-inner"
+                  className="w-full px-5 py-3.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950/50 text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition-all shadow-sm dark:shadow-inner"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-xs font-bold text-zinc-400 uppercase tracking-wider">Email (Optional)</label>
+                <label className="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Email (Optional)</label>
                 <input
                   {...register('submitterEmail')}
                   placeholder="jane@company.com"
-                  className="w-full px-5 py-3.5 rounded-xl border border-zinc-800 bg-zinc-950/50 text-white placeholder:text-zinc-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition-all shadow-inner"
+                  className="w-full px-5 py-3.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950/50 text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition-all shadow-sm dark:shadow-inner"
                 />
-                {errors.submitterEmail && <p className="text-xs text-red-400 font-medium mt-1">{errors.submitterEmail.message}</p>}
+                {errors.submitterEmail && <p className="text-xs text-red-500 dark:text-red-400 font-medium mt-1">{errors.submitterEmail.message}</p>}
               </div>
             </div>
 
             <div className="space-y-2">
-              <label className="text-xs font-bold text-zinc-400 uppercase tracking-wider">Category</label>
+              <label className="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Category</label>
               <select
                 {...register('category')}
-                className="w-full px-5 py-3.5 rounded-xl border border-zinc-800 bg-zinc-950/50 text-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition-all cursor-pointer shadow-inner appearance-none"
+                className="w-full px-5 py-3.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950/50 text-zinc-900 dark:text-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition-all cursor-pointer shadow-sm dark:shadow-inner appearance-none"
               >
-                <option value="Bug">🐛 Bug Report</option>
-                <option value="Feature Request">✨ Feature Request</option>
-                <option value="Improvement">📈 Improvement</option>
-                <option value="Other">💬 Other / General</option>
+                <option value="Bug"> Bug Report</option>
+                <option value="Feature Request"> Feature Request</option>
+                <option value="Improvement">Improvement</option>
+                <option value="Other"> Other / General</option>
               </select>
             </div>
 
             <div className="space-y-2">
-              <label className="text-xs font-bold text-zinc-400 uppercase tracking-wider">Subject / Title</label>
+              <label className="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Subject / Title</label>
               <input
                 {...register('title')}
                 placeholder="What's this about?"
                 className={cn(
-                  "w-full px-5 py-3.5 rounded-xl border bg-zinc-950/50 text-white placeholder:text-zinc-600 outline-none transition-all shadow-inner",
-                  errors.title ? "border-red-500 focus:ring-red-500/20" : "border-zinc-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                  "w-full px-5 py-3.5 rounded-xl border bg-white dark:bg-zinc-950/50 text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-600 outline-none transition-all shadow-sm dark:shadow-inner",
+                  errors.title ? "border-red-500 focus:ring-red-500/20" : "border-zinc-200 dark:border-zinc-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
                 )}
               />
-              {errors.title && <p className="text-xs text-red-400 font-medium mt-1">{errors.title.message}</p>}
+              {errors.title && <p className="text-xs text-red-500 dark:text-red-400 font-medium mt-1">{errors.title.message}</p>}
             </div>
 
             <div className="space-y-2">
               <div className="flex justify-between items-center">
-                <label className="text-xs font-bold text-zinc-400 uppercase tracking-wider">Description</label>
+                <label className="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Description</label>
                 <span className={cn(
                   "text-[10px] font-bold tracking-widest",
-                  description.length < 20 ? "text-zinc-600" : "text-green-400"
+                   description.length < 20 ? "text-zinc-400 dark:text-zinc-600" : "text-green-600 dark:text-green-400"
                 )}>
                   {description.length}/20 MIN chars
                 </span>
@@ -173,17 +173,17 @@ export default function FeedbackForm() {
                 rows={6}
                 placeholder="Provide as much detail as possible..."
                 className={cn(
-                  "w-full px-5 py-3.5 rounded-xl border bg-zinc-950/50 text-white placeholder:text-zinc-600 outline-none transition-all shadow-inner resize-none",
-                  errors.description ? "border-red-500 focus:ring-red-500/20" : "border-zinc-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                  "w-full px-5 py-3.5 rounded-xl border bg-white dark:bg-zinc-950/50 text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-600 outline-none transition-all shadow-sm dark:shadow-inner resize-none",
+                  errors.description ? "border-red-500 focus:ring-red-500/20" : "border-zinc-200 dark:border-zinc-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
                 )}
               />
-              {errors.description && <p className="text-xs text-red-400 font-medium mt-1">{errors.description.message}</p>}
+              {errors.description && <p className="text-xs text-red-500 dark:text-red-400 font-medium mt-1">{errors.description.message}</p>}
             </div>
 
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full py-4 bg-gradient-to-r from-indigo-500 hover:from-indigo-400 to-purple-600 hover:to-purple-500 text-white rounded-xl font-bold shadow-xl shadow-indigo-500/20 hover:shadow-indigo-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all disabled:opacity-50 disabled:hover:translate-y-0 disabled:shadow-none flex items-center justify-center gap-3"
+              className="w-full py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 dark:from-indigo-500 dark:hover:from-indigo-400 dark:to-purple-600 dark:hover:to-purple-500 text-white rounded-xl font-bold shadow-xl shadow-indigo-500/20 hover:shadow-indigo-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all disabled:opacity-50 disabled:hover:translate-y-0 disabled:shadow-none flex items-center justify-center gap-3"
             >
               {isSubmitting ? (
                 <>

@@ -40,7 +40,7 @@ export default function LoginPage() {
   };
 
   return (
-    <main className="min-h-screen relative flex flex-col items-center justify-center p-4 bg-[#0a0a0a] overflow-hidden text-white">
+    <main className="min-h-screen relative flex flex-col items-center justify-center p-4 overflow-hidden">
       {/* Decorative Orbs */}
       <div className="absolute top-0 left-0 w-full h-full -z-10 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-indigo-500/20 rounded-full blur-[150px] opacity-40 animate-pulse" />
@@ -56,9 +56,6 @@ export default function LoginPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
 
         <div className="text-center space-y-3 relative z-10">
-          <div className="inline-flex items-center justify-center p-3 bg-zinc-800/50 rounded-2xl mb-4 border border-zinc-700/50 shadow-inner">
-            <Sparkles className="w-8 h-8 text-indigo-400" />
-          </div>
           <h1 className="text-4xl font-extrabold tracking-tight bg-gradient-to-br from-white to-zinc-400 bg-clip-text text-transparent">
             Admin Portal
           </h1>
