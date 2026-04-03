@@ -114,31 +114,45 @@ FeedPulse AI acts like your 24/7 virtual product manager:
 - ADMIN_EMAIL=adminfeedpulse01@gmail.com
 - ADMIN_PASSWORD=Admin01@
 
-## Images
-
 ### Admin Dashboard
-![Admin Dashboard] <img src="images/AdminDashboard.png" alt="FeedPulse Detailed Workflow Steps" width="800" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+<div align="center">
+  <img src="images/AdminDashboard.png" alt="Admin Dashboard" width="800" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+</div>
 
-### Admin Dashbord 2
-![Admin Dashbord 2]<img src="images/AdminDashbord2.png" alt="FeedPulse Detailed Workflow Steps" width="800" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+### Admin Dashboard 2
+<div align="center">
+  <img src="images/AdminDashbord%202.png" alt="Admin Dashboard 2" width="800" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+</div>
 
 ### Admin Login
-![Admin Login]<img src="images/AdminLogin.png" alt="FeedPulse Detailed Workflow Steps" width="800" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />/
+<div align="center">
+  <img src="images/AdminLogin.png" alt="Admin Login" width="800" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+</div>
 
-### Submition sucsessful
-![Submition sucsessful]<img src="images/Submitionsucsessful.png" alt="FeedPulse Detailed Workflow Steps" width="800" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+### Submission Successful
+<div align="center">
+  <img src="images/Submitionsucsessful.png" alt="Submission Successful" width="800" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+</div>
 
 ### User View Mobile
-![User View Mobile]<img src="images/UserViewMobile.png" alt="FeedPulse Detailed Workflow Steps" width="800" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+<div align="center">
+  <img src="images/UserViewMobile.png" alt="User View Mobile" width="800" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+</div>
 
 ### User View
-![User View]<img src="images/UserView.png" alt="FeedPulse Detailed Workflow Steps" width="800" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+<div align="center">
+  <img src="images/UserView.png" alt="User View" width="800" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+</div>
 
-### User Submition Store
-![User Submition Store]<img src="images/User Submitions.png" alt="FeedPulse Detailed Workflow Steps" width="800" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+### User Submissions Store
+<div align="center">
+  <img src="images/User%20Submitions.png" alt="User Submissions Store" width="800" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+</div>
 
-### Admin Loging Details Store
-![Admin Loging Details Store]<img src="images/DatabaseAdminDetails.png" alt="FeedPulse Detailed Workflow Steps" width="800" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+### Admin Login Details Store
+<div align="center">
+  <img src="images/DatabaseAdminDetails.png" alt="Admin Login Details Store" width="800" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+</div>
 
 
 ## Installation 

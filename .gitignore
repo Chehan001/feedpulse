@@ -4,6 +4,3 @@ dist/
 .env
 .DS_Store
 *.log
-
-images/
-*.png                       
