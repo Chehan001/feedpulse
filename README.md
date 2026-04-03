@@ -117,22 +117,22 @@ FeedPulse AI acts like your 24/7 virtual product manager:
 ## Images
 
 ### Admin Dashboard
-![Admin Dashboard](images/Admin%20Dashboard.png)
+![Admin Dashboard](images/AdminDashboard.png)
 
 ### Admin Dashbord 2
-![Admin Dashbord 2](images/Admin%20Dashbord%202.png)
+![Admin Dashbord 2](images/AdminDashbord2.png)
 
 ### Admin Login
-![Admin Login](images/Admin%20Login.png)
+![Admin Login](images/AdminLogin.png)
 
 ### Submition sucsessful
-![Submition sucsessful](images/Submition%20sucsessful.png)
+![Submition sucsessful](images/Submitionsucsessful.png)
 
 ### User View Mobile
-![User View Mobile](images/User%20View%20Mobile.png)
+![User View Mobile](images/UserViewMobile.png)
 
 ### User View
-![User View](images/User%20View.png)
+![User View](images/UserView.png)
 
 ## Installation 
 
