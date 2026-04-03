@@ -1,17 +1,17 @@
 <div align="center">
-  <h1>🚀 FeedPulse AI — Intelligent Feedback Processing System</h1>
+  <h1> FeedPulse AI — Intelligent Feedback Processing System</h1>
   <p><h3>Transform messy user feedback into structured, actionable product insights using AI.</h3></p>
   <br />
 </div>
 
-## 🌐 Overview
+##  Overview
 **FeedPulse AI** is an end-to-end feedback processing platform that leverages **Google Gemini AI** to automatically analyze, categorize, and prioritize user feedback in real-time. 
 
 It eliminates manual effort by converting raw user input into structured engineering-ready data.
 
 ---
 
-## ✨ Key Features
+##  Key Features
 -  **AI-powered sentiment analysis**
 -  **Automatic priority scoring (P1–P10)**
 -  **Smart tagging (#Bug, #UX, #Feature)**
@@ -22,7 +22,7 @@ It eliminates manual effort by converting raw user input into structured enginee
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 <div align="center">
   <img src="images/readme2.png" alt="FeedPulse Summary Workflow" width="800" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
@@ -35,7 +35,7 @@ User → Node.js API → MongoDB + Gemini AI → Enriched Data → Admin Dashboa
 
 ---
 
-## 🔄 Workflow Breakdown
+## Workflow Breakdown
 
 <div align="center">
   <img src="images/readme1.png" alt="FeedPulse Detailed Workflow Steps" width="800" style="border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
@@ -63,7 +63,7 @@ Gemini processes the feedback context and returns precise data points:
 - **Tags** *(e.g., #Bug, #UX, #Feature)*
 - **Theme Extraction**
 
-📦 **Output format:** Strict JSON payload
+ **Output format:** Strict JSON payload
 
 ###  4. Data Enrichment (MongoDB Merge)
 The backend intelligently merges the AI response with the original database record:
@@ -87,7 +87,7 @@ Empowered by AI-enriched data, Admins can:
 
 ---
 
-## 🧠 AI Capabilities
+##  AI Capabilities
 FeedPulse AI acts like your 24/7 virtual product manager:
 -  **Understands user intent**
 -  **Prioritizes issues automatically**
@@ -96,7 +96,7 @@ FeedPulse AI acts like your 24/7 virtual product manager:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 | :--- | :--- |
@@ -113,6 +113,26 @@ FeedPulse AI acts like your 24/7 virtual product manager:
 - GEMINI_API_KEY= my_google_gemini_key
 - ADMIN_EMAIL=adminfeedpulse01@gmail.com
 - ADMIN_PASSWORD=Admin01@
+
+## Images
+
+### Admin Dashboard
+![Admin Dashboard](images/Admin%20Dashboard.png)
+
+### Admin Dashbord 2
+![Admin Dashbord 2](images/Admin%20Dashbord%202.png)
+
+### Admin Login
+![Admin Login](images/Admin%20Login.png)
+
+### Submition sucsessful
+![Submition sucsessful](images/Submition%20sucsessful.png)
+
+### User View Mobile
+![User View Mobile](images/User%20View%20Mobile.png)
+
+### User View
+![User View](images/User%20View.png)
 
 ## Installation 
 
